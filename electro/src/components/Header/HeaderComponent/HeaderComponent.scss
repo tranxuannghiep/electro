@@ -1,0 +1,264 @@
+@import "../../../media";
+#HeaderComponent {
+  background-color: var(--color-primary);
+  position: relative;
+  @include xl {
+    padding: 32px;
+    background-color: var(--bg);
+  }
+  .container {
+    .header-component {
+      align-items: center;
+
+      justify-content: space-between;
+
+      display: flex;
+      .logo {
+        display: flex;
+        align-items: center;
+        @include xl {
+          justify-content: space-between;
+          padding-right: 15px;
+          margin-right: 15px;
+        }
+        width: 300px;
+        height: 41px;
+
+        > a {
+          svg {
+            @include xs {
+              max-width: 100px;
+            }
+            @include xl {
+              justify-content: space-between;
+              path {
+                fill: var(--color-fill);
+              }
+              max-width: 145px;
+              font-size: 14px;
+            }
+            max-width: 120px;
+          }
+        }
+        .navigation-lg {
+          display: block;
+          margin-right: 20px;
+          span {
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+          }
+          @include xl {
+            display: none;
+          }
+        }
+      }
+
+      .header-search {
+        display: none;
+        @include xl {
+          display: flex;
+        }
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        border: 1px solid var(--color-primary) !important;
+        border-radius: 50px;
+        height: 41px;
+        .ant-input {
+          background-color: var(--bg);
+          height: 100%;
+          padding: 0 30px;
+          color: var(--color-headings);
+          border: 1px solid transparent !important;
+          border-right-color: transparent !important;
+          border-top-left-radius: 50px;
+          border-bottom-left-radius: 50px;
+          &:hover {
+            border-color: transparent !important;
+            border-right-color: transparent !important;
+          }
+          &:focus {
+            border-color: transparent !important;
+            border-right-color: transparent !important;
+          }
+        }
+        .ant-select {
+          height: 100%;
+          background-color: var(--bg);
+        }
+        .ant-select-selector {
+          background-color: var(--bg);
+          color: var(--color-text);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          width: 180px;
+          border: 1px solid transparent !important;
+          border-left-color: transparent !important;
+          &:hover {
+            border-color: transparent !important;
+            border-left-color: transparent !important;
+          }
+        }
+        .ant-select-arrow {
+          color: var(--color-text);
+        }
+        .icon-search {
+          width: 60px;
+          background-color: var(--color-primary);
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 41px;
+          border-top-right-radius: 50px;
+          border-bottom-right-radius: 50px;
+          border: 2px solid var(--color-primary);
+          cursor: pointer;
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+      .header-icons {
+        @include xl {
+          padding-left: 15px;
+        }
+
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          li {
+            margin-left: 10px;
+            @include xl {
+              margin-left: 38px;
+            }
+            position: relative;
+            a {
+              &:hover {
+                color: inherit;
+              }
+            }
+            &.search {
+              span {
+                color: #333 !important;
+              }
+              @include xl {
+                display: none;
+              }
+            }
+            &.wishlist,
+            &.compare {
+              display: none;
+              @include xl {
+                display: block;
+              }
+            }
+            .cart-money {
+              font-size: 14px;
+              font-weight: 500;
+              margin-left: 4px;
+              display: none;
+              @include xl {
+                display: inline-block;
+                color: var(--color-headings);
+              }
+            }
+            a {
+              @include xl {
+                span {
+                  color: var(--color-headings);
+                }
+              }
+              span {
+                font-size: 20px;
+              }
+              &.shopping-cart {
+                .ant-badge {
+                  margin-right: 7px;
+                }
+                font-size: 18px;
+                font-weight: 700;
+                .ant-scroll-number {
+                  background-color: #000;
+                  @include xl {
+                    background-color: #fed700;
+                  }
+                }
+                .ant-scroll-number-only-unit,
+                .ant-scroll-number-only {
+                  font-size: 12px;
+                  color: #fff;
+                  @include xl {
+                    color: #000;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .search-sub {
+    position: absolute;
+    // transform: translateY(-50%);
+    // opacity: 0;
+    display: none;
+    &.ani-show-tobottom {
+      display: flex;
+      animation: toBottom 0.3s forwards;
+    }
+    &.ani-show-totop {
+      animation: toTop 0.3s forwards;
+      display: flex;
+    }
+    @include xs {
+      height: 60px;
+    }
+    @include xl {
+      display: none !important;
+    }
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background-color: #fff;
+    height: 80px;
+    top: 100%;
+    z-index: 10;
+    box-shadow: 0 4px 3px 0 rgba(1, 1, 1, 0.1);
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    input {
+      @include xs {
+        padding: 5.5px 10px;
+      }
+      width: 100%;
+      padding: 5.5px 21px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      list-style: 1.2;
+    }
+    span {
+      display: block;
+      padding-right: 10px;
+      font-size: 20px;
+      color: #333;
+      cursor: pointer;
+    }
+  }
+}
+
+.ant-tooltip-inner {
+  padding: 0 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}

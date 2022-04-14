@@ -1,0 +1,112 @@
+#Compare {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  .zoom-in {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: var(--color-headings);
+    // transform: translateY(100px);
+    // opacity: 0;
+    &.ani-zoom-in {
+      animation: zoomin 0.6s forwards;
+    }
+    &.ani-zoom-out {
+      animation: zoomout 0.6s forwards;
+    }
+  }
+  .container {
+    .compare-show {
+      &.ani-zoom-in {
+        animation: zoomin 0.6s forwards;
+      }
+      &.ani-zoom-out {
+        animation: zoomout 0.6s forwards;
+      }
+      background-color: var(--bg-home-adv);
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.12);
+      position: relative;
+      .product {
+        padding: 20px;
+        position: relative;
+        border-right: 1px solid var(--boder-bottom);
+        img {
+          width: 50px;
+          height: 50px;
+          margin: 0 auto;
+          cursor: pointer;
+        }
+        p {
+          margin: 20px 0 0 0;
+          text-align: center;
+          font-size: 18px;
+          font-weight: 500;
+          color: var(--color-headings);
+        }
+        span {
+          position: absolute;
+          content: "";
+          top: 10px;
+          right: 10px;
+          font-size: 20px;
+          cursor: pointer;
+          color: var(--text-price-sale);
+        }
+      }
+      .product-add {
+        border-right: 1px solid var(--boder-bottom);
+        padding: 20px;
+        img {
+          width: 50px;
+          height: 50px;
+          cursor: pointer;
+          margin: auto;
+        }
+        p {
+          margin: 20px 0 0 0;
+          text-align: center;
+          font-size: 18px;
+          font-weight: 500;
+          color: var(--color-headings);
+        }
+      }
+      .compare-now {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        button {
+          width: 200px;
+          height: 50px;
+          background-color: #40a9ff;
+          color: #fff;
+          &.pointer-none {
+            pointer-events: none;
+            background-color: #efecec;
+            border-color: #efecec;
+            color: #333;
+          }
+        }
+        p {
+          margin: 20px 0 0 0;
+          font-size: 18px;
+          font-weight: 500;
+          color: var(--color-headings);
+          cursor: pointer;
+        }
+      }
+      .zoom-out {
+        position: absolute;
+        top: -32px;
+        right: 0;
+        color: var(--color-headings);
+        background-color: var(--bg-home-adv);
+        border-color: var(--bg-home-adv);
+      }
+    }
+  }
+}

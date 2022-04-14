@@ -1,0 +1,182 @@
+@import "../../../media";
+#ProductShop {
+  .shop-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include xs {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    h3 {
+      padding-bottom: 12px;
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 0;
+      line-height: 1.5;
+      color: var(--color-headings);
+    }
+  }
+  .show-number-of-results {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    color: var(--color-headings);
+  }
+  .nav-inline {
+    padding: 4px 20px;
+    @include xs {
+      padding: 4px 10px;
+    }
+    background-color: var(--bg-copyright);
+    border-radius: 10px;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.show-view-switcher {
+          @include xs {
+            display: none;
+          }
+          @include sm {
+            display: none;
+          }
+          @include xl {
+            display: block;
+          }
+          span {
+            &:not(:first-child) {
+              margin-left: 15px;
+            }
+            cursor: pointer;
+            color: var(--color-headings);
+            opacity: 0.5;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+        &.nav-select {
+          span {
+            color: var(--color-headings) !important;
+          }
+          .ant-select-selector {
+            border-radius: 20px;
+            background-color: var(--bg);
+          }
+          .show-number-of-page {
+            @include xs {
+              display: none;
+            }
+            @include sm {
+              display: none;
+            }
+            @include xl {
+              display: block;
+            }
+          }
+          .select-filter {
+            margin-right: 20px;
+            width: 180px;
+            @include xs {
+              margin-right: 0px;
+              width: 160px;
+            }
+            @include sm {
+              margin-right: 0px;
+            }
+            .ant-select {
+              width: 100%;
+              border-radius: 20px;
+            }
+          }
+        }
+        &.form-paginate {
+          @include xs {
+            display: none;
+          }
+          @include sm {
+            display: none;
+          }
+          @include xl {
+            display: flex;
+          }
+          width: 127px;
+          .current-page {
+            width: 45px;
+            height: 30px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg);
+            text-align: center;
+            color: var(--color-headings);
+            margin-right: 10px;
+          }
+          color: var(--color-headings);
+        }
+        &.show-filter {
+          display: none;
+          cursor: pointer;
+          font-size: 15px;
+          font-weight: 500;
+          color: var(--color-headings);
+          @include xs {
+            display: flex;
+            flex-direction: column;
+          }
+          @include sm {
+            display: block;
+
+            span {
+              margin-right: 10px;
+            }
+          }
+          @include xl {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .shop-product {
+    border-bottom: 1px solid var(--boder-bottom);
+    .Product {
+      @include md {
+        height: 100%;
+      }
+      @include xl {
+        height: 270px;
+      }
+      @include xxl {
+        height: 362px;
+      }
+    }
+  }
+  .paginate-product-shop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    .show-number-of-results {
+      @include xs {
+        margin-bottom: 20px;
+      }
+    }
+    @include xs {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .ant-pagination-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

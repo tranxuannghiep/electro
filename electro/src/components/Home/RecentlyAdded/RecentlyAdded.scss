@@ -1,0 +1,92 @@
+@import "../../../media";
+#RecentlyAdded {
+  padding-bottom: 40px;
+  .container {
+    .nav-inline {
+      border-bottom: 1px solid var(--boder-bottom);
+      margin-bottom: 14px;
+      display: flex;
+      > h3 {
+        padding-bottom: 12px;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 0;
+        line-height: 1.5;
+        color: var(--color-headings);
+        position: relative;
+        &::after {
+          content: " ";
+          border-bottom: 1.5px solid transparent;
+          display: block;
+          position: absolute;
+          bottom: -1px;
+          width: 100%;
+          background-color: var(--color-primary);
+        }
+      }
+    }
+    .slick-prev,
+    .slick-next {
+      border-radius: 50%;
+      top: -12%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      span {
+        font-size: 18px;
+        color: var(--text-placehoder);
+        &:hover {
+          color: var(--color-dark-hover);
+        }
+      }
+    }
+    .slick-next {
+      right: 0;
+    }
+    .slick-prev {
+      left: auto;
+      right: 25px;
+    }
+    .slick-prev::before,
+    .slick-next::before {
+      display: none;
+    }
+    .slick-list {
+      padding: 1.5px;
+      .slick-track {
+        @include xs {
+          padding-bottom: 0;
+        }
+        @include sm {
+          padding-bottom: 0;
+        }
+        @include md {
+          padding-bottom: 50px;
+        }
+      }
+    }
+    .slick-slide {
+      > div {
+        display: flex;
+      }
+    }
+    img {
+      width: 120px;
+      height: 120px;
+      @include xs {
+        width: 75px;
+        height: 75px;
+      }
+    }
+    .hover-area {
+      padding-left: 0;
+      padding-right: 0;
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+}

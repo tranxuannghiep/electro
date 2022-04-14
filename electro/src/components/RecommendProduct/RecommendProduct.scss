@@ -1,0 +1,14 @@
+@import "../../media";
+.brand-adv {
+  img {
+    @include lg {
+      width: 329px;
+    }
+    @include xl {
+      width: 270px;
+    }
+    @include xxl {
+      width: 100%;
+    }
+  }
+}

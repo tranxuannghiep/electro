@@ -1,0 +1,103 @@
+@import "../../../media";
+#BestSellers {
+  padding: 30px 0 40px;
+
+  .slick-slide {
+    padding-bottom: 40px;
+    > div {
+      display: flex;
+    }
+  }
+  .slick-list {
+    padding: 1.2px;
+  }
+  .container {
+    .nav-inline {
+      display: flex;
+      justify-content: space-between;
+
+      margin-bottom: 14px;
+      flex-direction: column;
+      @include xl {
+        border-bottom: 1px solid var(--boder-bottom);
+        align-items: center;
+        flex-direction: row;
+      }
+      > h3 {
+        padding-bottom: 12px;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        color: var(--color-headings);
+        position: relative;
+        border-bottom: 1px solid #ccc;
+
+        display: flex;
+        @include xl {
+          border-color: transparent;
+          margin-bottom: 0;
+        }
+        &::after {
+          content: " ";
+          border-bottom: 1.5px solid transparent;
+          display: block;
+          position: absolute;
+          bottom: -1px;
+          // width: 100px;
+          width: 115px;
+
+          background-color: var(--color-primary);
+        }
+      }
+      ul {
+        display: flex;
+        overflow: auto;
+        min-height: 40px;
+        @include md {
+          align-items: center;
+        }
+        li {
+          &:not(:first-child) {
+            margin-left: 14px;
+          }
+          margin-bottom: 10px;
+          @include md {
+            margin-bottom: 0;
+          }
+          a {
+            width: max-content;
+            display: block;
+            &.nav-active {
+              border: 2px solid var(--color-primary);
+              border-radius: 20px;
+              padding: 4.5px 22px;
+              background-color: var(--bg-brand);
+              color: rgba(#333, 0.8);
+            }
+            font-size: 15px;
+            font-weight: 500;
+            padding: 8px 16px;
+            line-height: 1.2;
+            color: var(--color-brand);
+          }
+        }
+      }
+    }
+    @include xs {
+      .ProductHor-wrap {
+        border-bottom: 1px solid var(--boder-bottom);
+      }
+    }
+    @include sm {
+      .ProductHor-wrap {
+        border-bottom: 1px solid var(--boder-bottom);
+      }
+    }
+    @include md {
+      .ProductHor-wrap {
+        border-bottom: none;
+      }
+    }
+  }
+}

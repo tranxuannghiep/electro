@@ -1,0 +1,179 @@
+@import "../../media";
+#Detail {
+  margin-bottom: 60px;
+  .container {
+    @include xl {
+      max-width: 900px;
+    }
+    .reviews {
+      .tab-title {
+        h3 {
+          padding-bottom: 15px;
+          font-size: 20px;
+          font-weight: 600;
+          border-bottom: 2px solid var(--color-primary);
+          position: relative;
+          color: var(--color-headings);
+          margin-bottom: 0;
+          &::before {
+            content: " ";
+            height: 4px;
+            width: 10px;
+            display: block;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            border-radius: 0 0 10px 10px;
+            transform: translateX(-50%);
+            background-color: #fed700;
+          }
+          &::after {
+            content: " ";
+            border-bottom: 2px solid transparent;
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            width: 100%;
+            z-index: 2;
+          }
+        }
+        display: flex;
+        justify-content: center;
+      }
+      .reviews-wrap {
+        border: 1px solid var(--boder-bottom);
+        padding: 35px;
+        border-radius: 15px;
+        .title {
+          font-size: 20px;
+          font-weight: 400;
+          color: var(--color-headings);
+          line-height: 1.3;
+        }
+        .all-reviews {
+          margin-bottom: 45px;
+          .title {
+            margin-bottom: 45px;
+          }
+          .avg-rating {
+            font-size: 14px;
+            color: var(--color-headings);
+            margin-bottom: 20px;
+            .avg-rating-number {
+              font-size: 30px;
+              font-weight: 600;
+              display: block;
+              color: var(--color-headings);
+            }
+          }
+          .rating-histogram {
+            .rating-bar {
+              display: flex;
+              align-items: center;
+              margin-bottom: 16px;
+              .rating-percentage-bar {
+                flex: 1;
+                max-width: 200px;
+                margin: 0 15px 0 40px;
+                height: 10px;
+                background-color: var(--color-rating-bar);
+                border-radius: 4px;
+              }
+              .rating-count {
+                font-size: 18px;
+                color: #b6b6b6;
+              }
+            }
+          }
+        }
+        .you-review {
+          label {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--color-headings);
+            span {
+              line-height: 1.2;
+            }
+          }
+          .ant-form-item-label {
+            text-align: left;
+          }
+          .ant-input {
+            border-radius: 50px;
+            height: 45px;
+            padding: 5px 15px;
+            background-color: var(--bg-input);
+            border-color: var(--border-input);
+            color: var(--color-headings);
+          }
+          textarea.ant-input {
+            height: 100%;
+            border-radius: 20px;
+            padding: 10px 15px;
+          }
+          .ant-rate-star-second {
+            color: rgba(139, 125, 125, 0.5);
+          }
+          .ant-rate-star-full .ant-rate-star-second {
+            color: #fed700;
+          }
+          button {
+            height: 45px;
+            width: 150px;
+            border-radius: 20px;
+            background-color: #efecec;
+            border-color: #efecec;
+            color: #333;
+            font-size: 15px;
+            font-weight: 500;
+            &:hover {
+              background-color: #000;
+              border-color: #000;
+              color: #fff;
+            }
+          }
+          .title {
+            margin-bottom: 25px;
+          }
+        }
+        .comments {
+          margin: 60px 0 35px;
+          background-color: #fed700;
+          border-left: 8px solid rgba(0, 0, 0, 0.15);
+          p {
+            display: block;
+            padding: 18px 25px;
+            margin: 0;
+            line-height: 1.2;
+            font-size: 15px;
+            font-weight: 500;
+            color: #333;
+          }
+        }
+        .comments-list {
+          li {
+            &:not(:last-child) {
+              border-bottom: 1px solid var(--boder-bottom);
+              margin-bottom: 20px;
+            }
+            .star-rating {
+              margin-bottom: 10px;
+            }
+            .comment-desc {
+              color: var(--color-headings);
+              margin-bottom: 25px;
+            }
+            .comment-meta {
+              font-size: 15px;
+              font-style: italic;
+              color: var(--color-headings);
+              letter-spacing: 0.2px;
+              opacity: 0.8;
+              margin-bottom: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

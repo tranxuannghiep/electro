@@ -1,0 +1,95 @@
+@import "../../../media";
+#HomeAdv {
+  padding: 30px 0;
+  .container {
+    .ant-row {
+      flex-wrap: nowrap;
+      overflow: auto;
+    }
+    .home-adv-item {
+      padding: 16px;
+      background-color: var(--bg-home-adv);
+      border-color: var(--bg-home-adv);
+      @include xs {
+        padding: 5px;
+        height: 200px;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        img {
+          width: 150px;
+          margin-right: 16px;
+          @include xs {
+            margin-right: 8px;
+            width: 100px;
+          }
+        }
+        .home-adv-item-body {
+          p {
+            @include xs {
+              font-size: 16px;
+            }
+            text-transform: uppercase;
+            font-size: 19px;
+            font-weight: 400;
+            color: var(--color-headings);
+            line-height: 1.15;
+            margin-bottom: 0;
+            span {
+              font-weight: 600;
+            }
+          }
+          .btn-shop {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            span {
+              &:first-child {
+                font-size: 14px;
+                font-weight: 700;
+                color: var(--color-headings);
+              }
+              &:last-child {
+                color: var(--color-primary);
+                font-size: 18px;
+                margin-left: 10px;
+              }
+            }
+          }
+          .sale-off {
+            margin-top: 10px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            color: var(--color-headings);
+            .upto {
+              width: 18px;
+              margin-right: 4px;
+              font-size: 13px;
+            }
+            .value {
+              font-size: 28px;
+              font-weight: 600;
+            }
+            .suffix {
+              padding-bottom: 12px;
+              font-weight: 600;
+              margin-left: 2px;
+            }
+            span {
+              &:last-child {
+                &:last-child {
+                  color: var(--color-primary);
+                  font-size: 18px;
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

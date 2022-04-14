@@ -1,0 +1,45 @@
+@import "../../../media";
+#CopyRight {
+  background-color: var(--bg-copyright);
+  padding: 4px 0;
+  .container {
+    display: flex;
+    align-items: center;
+    @include xs {
+      justify-content: center;
+    }
+    @include sm {
+      justify-content: center;
+    }
+    @include md {
+      justify-content: space-between;
+    }
+    .copyright-left {
+      @include sm {
+        padding: 10px;
+      }
+      @include xs {
+        padding: 10px;
+      }
+      @include md {
+        padding: 0;
+      }
+      color: var(--color-headings);
+      a {
+        font-weight: 700;
+        color: var(--color-headings);
+      }
+    }
+    .copyright-right {
+      @include xs {
+        display: none;
+      }
+      @include sm {
+        display: none;
+      }
+      @include md {
+        display: block;
+      }
+    }
+  }
+}

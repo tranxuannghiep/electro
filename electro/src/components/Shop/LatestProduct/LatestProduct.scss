@@ -1,0 +1,25 @@
+#LatestProduct {
+  margin: 45px 0;
+  .title {
+    border-bottom: 1px solid var(--boder-bottom);
+    display: flex;
+    margin-bottom: 30px;
+    > h3 {
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--color-headings);
+      padding-bottom: 20px;
+      position: relative;
+      margin: 0;
+      &::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        width: 100%;
+        border-bottom: 1.5px solid transparent;
+        background-color: var(--color-primary);
+      }
+    }
+  }
+}

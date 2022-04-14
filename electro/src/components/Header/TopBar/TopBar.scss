@@ -1,0 +1,51 @@
+@import "../../../media";
+#TopBar {
+  border-bottom: 1px solid var(--boder-bottom);
+  display: none;
+  @include xl {
+    display: block;
+  }
+  .container {
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7.5px 0;
+      .menu-top-bar-left {
+        .wellcome {
+          color: var(--color-text);
+          font-weight: 400;
+          font-size: 14.5px;
+          transform: all 0.3s;
+          &:hover {
+            color: var(--color-dark-hover);
+          }
+        }
+      }
+      .menu-top-bar-right {
+        ul {
+          display: flex;
+          align-items: center;
+          li {
+            &:not(:first-child)::before {
+              content: "|";
+              color: var(--color-text);
+              display: inline-block;
+              margin: 0 13px;
+            }
+            a {
+              color: var(--color-text);
+              transition: all 0.3s;
+              &:hover {
+                color: var(--color-dark-hover);
+              }
+              span {
+                margin-right: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,274 @@
+@import "../../../media";
+#HomeSlider {
+  @include sm {
+    height: 300px;
+  }
+  @include md {
+    height: 350px;
+  }
+  @include lg {
+    height: 422px;
+  }
+  @include xs {
+    height: 200px;
+  }
+  background-image: url(https://electro.madrasthemes.com/wp-content/uploads/2019/01/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  .slick-slide {
+    overflow: hidden;
+  }
+  .slick-dots {
+    @include xs {
+      display: none !important;
+    }
+    bottom: 30px;
+    margin: 0;
+    li {
+      button {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color: #858383;
+      }
+      &.slick-active {
+        margin-right: 10px;
+        button {
+          background-color: var(--color-primary);
+          width: 30px;
+          height: 9px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  .home-slider-item-first {
+    display: flex !important;
+    align-items: center;
+    @include xs {
+      display: none !important;
+    }
+    @include sm {
+      justify-content: center;
+    }
+    @include xl {
+      margin-left: 15%;
+    }
+    @include xxl {
+      margin-left: 5%;
+    }
+    .home-slider-item-first-text {
+      text-transform: uppercase;
+
+      @include sm {
+        margin-right: 30px;
+      }
+      @include md {
+        margin-right: 80px;
+      }
+      > h2 {
+        @include sm {
+          font-size: 40px;
+        }
+        @include md {
+          font-size: 50px;
+        }
+        @include lg {
+          font-size: 60px;
+        }
+
+        font-weight: 300;
+        margin-bottom: 0;
+        opacity: 0;
+
+        &:first-child {
+          animation: fade-in 0.8s 1s forwards;
+        }
+        &:nth-child(2) {
+          animation: fade-in 0.8s 1.4s forwards;
+        }
+      }
+      > h5 {
+        opacity: 0;
+        margin: 10px 0;
+        font-size: 15px;
+        font-weight: 700;
+        animation: fade-in 0.8s 1.8s forwards;
+        line-height: 1.2;
+        @include md {
+          width: auto;
+        }
+        @include sm {
+          width: 150px;
+        }
+      }
+      .home-slider-item-price {
+        opacity: 0;
+
+        animation: fade-in 0.8s 2.2s forwards;
+        h3 {
+          font-size: 18px;
+          font-weight: 400;
+        }
+        p {
+          font-size: 50px;
+          font-weight: 700;
+          position: relative;
+          margin: 0;
+          margin-left: 20px;
+          &::after {
+            position: absolute;
+            content: "99";
+            font-size: 36px;
+            margin-left: 3px;
+            top: calc(0% - 5px);
+          }
+          span {
+            margin-left: -20px;
+            position: absolute;
+            content: "";
+            font-size: 36px;
+            top: calc(0% - 5px);
+          }
+        }
+      }
+      button {
+        margin-top: 20px;
+        background-color: var(--color-primary);
+        border-color: var(--color-primary);
+        @include sm {
+          width: 150px;
+        }
+        @include md {
+          width: 215px;
+        }
+        height: 45px;
+        border-radius: 10px;
+        font-size: 18px;
+        color: #333;
+        opacity: 0;
+        animation: fade-in 0.8s 2.6s forwards;
+        &:hover {
+          background-color: #e7c400;
+          border-color: #e7c400;
+        }
+      }
+    }
+    .home-slider-item-first-img {
+      img {
+        @include sm {
+          max-height: 300px;
+        }
+        @include md {
+          max-height: 350px;
+        }
+        @include lg {
+          max-height: 422px;
+        }
+        transform: translateX(50%) scale(1.2);
+        animation: to-left 0.8s forwards;
+        @include md {
+          height: auto;
+        }
+      }
+    }
+  }
+  .home-slider-item {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    @include xs {
+      display: none !important;
+    }
+
+    @include xl {
+      margin-left: 35%;
+      justify-content: flex-start;
+    }
+    .home-slider-item-first-text {
+      text-transform: uppercase;
+      @include sm {
+        width: 300px;
+        margin-right: 20px;
+      }
+      @include md {
+        width: 450px;
+      }
+      &.last-text {
+        margin-right: 30px;
+      }
+      h3 {
+        color: #34bcec;
+        font-size: 18px;
+      }
+      h2 {
+        @include sm {
+          font-size: 30px;
+        }
+        @include md {
+          font-size: 46px;
+        }
+        font-weight: 300;
+        margin-bottom: 0;
+        line-height: 1.1;
+        span {
+          font-weight: 700;
+        }
+      }
+      button {
+        margin-top: 40px;
+        background-color: var(--color-primary);
+        border-color: var(--color-primary);
+        width: 215px;
+        height: 45px;
+        border-radius: 10px;
+        font-size: 18px;
+        color: #333;
+        &:hover {
+          background-color: #e7c400;
+          border-color: #e7c400;
+        }
+      }
+    }
+    .home-slider-item-img {
+      img {
+        max-height: 422px;
+        transform: translateX(50%) scale(1.2);
+        animation: to-left 0.8s forwards;
+        @include sm {
+          max-height: 300px;
+        }
+        @include md {
+          max-height: 350px;
+        }
+        @include lg {
+          max-height: 422px;
+        }
+        &.last-img {
+          padding-top: 120px;
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+}
+
+@keyframes to-left {
+  0% {
+    opacity: 0;
+    transform: translateX(50%) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%) scale(1.2);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

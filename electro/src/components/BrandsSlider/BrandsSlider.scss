@@ -1,0 +1,45 @@
+#BrandsSlider {
+  padding: 18px 0;
+  border-top: 1px solid var(--boder-bottom);
+  border-bottom: 1px solid var(--boder-bottom);
+  .styles-module_carousel-base__3keqD {
+    align-items: center;
+  }
+  .brand-item {
+    a {
+      display: block;
+      img {
+        height: 50px;
+        opacity: 0.5;
+        width: auto;
+        margin: 0 auto;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    border-radius: 50%;
+
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    span {
+      font-size: 18px;
+      color: var(--text-placehoder);
+      &:hover {
+        color: var(--color-dark-hover);
+      }
+    }
+  }
+
+  .slick-prev::before,
+  .slick-next::before {
+    display: none;
+  }
+}

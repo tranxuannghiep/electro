@@ -1,0 +1,19 @@
+.product-recommend {
+  .product-recommend-title {
+    font-size: 1.429em;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--boder-bottom);
+    margin-bottom: 40px;
+    position: relative;
+    color: var(--color-fill);
+    font-weight: 400;
+    &::after {
+      content: " ";
+      width: 83px;
+      border-bottom: 2px solid var(--color-primary);
+      display: block;
+      position: absolute;
+      bottom: -1px;
+    }
+  }
+}

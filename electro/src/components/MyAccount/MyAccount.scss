@@ -1,0 +1,43 @@
+@import "../../media";
+#MyAccount {
+  padding: 35px 0;
+  .container {
+    .login-rgister {
+      position: relative;
+      &::before {
+        border-right: 1px solid #ddd;
+        height: 100%;
+        position: absolute;
+        content: " ";
+        right: 50%;
+        top: 0;
+        display: none;
+        @include md {
+          display: block;
+        }
+      }
+      .or-text {
+        position: absolute;
+
+        display: none;
+        @include md {
+          display: inline;
+        }
+        right: 50%;
+        top: 50%;
+        transform: translate(50%);
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        font-style: italic;
+        background-color: #fff;
+        z-index: 1;
+        color: var(--color-text);
+        font-weight: 500;
+      }
+    }
+  }
+}

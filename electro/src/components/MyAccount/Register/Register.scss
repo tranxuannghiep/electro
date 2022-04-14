@@ -1,0 +1,115 @@
+#Register {
+  h2 {
+    margin-bottom: 34px;
+    padding-bottom: 10px;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--color-headings);
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    position: relative;
+    &::after {
+      content: " ";
+      width: 20%;
+      border-bottom: 2px solid var(--color-primary);
+      display: block;
+      position: absolute;
+      bottom: -1px;
+    }
+  }
+  > p {
+    color: var(--color-headings);
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  form {
+    p {
+      color: var(--color-headings);
+      font-weight: 400;
+      font-size: 15px;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+    .ant-form-item-label {
+      label {
+        color: var(--color-headings);
+        font-weight: 500;
+        font-size: 14px;
+        &::before {
+          display: none;
+        }
+        &::after {
+          display: inline-block;
+          margin-left: 4px;
+          color: var(--color-headings);
+          font-size: 14px;
+          font-family: SimSun, sans-serif;
+          line-height: 1;
+          content: "*";
+        }
+      }
+    }
+    .ant-input-password {
+      border-radius: 50px;
+      height: 45px;
+      padding: 0 20px 0 0;
+    }
+    .ant-form-item-control-input-content {
+      margin-bottom: 8px;
+      height: 45px;
+    }
+    .ant-input {
+      height: 100%;
+      border-radius: 50px;
+      background-color: var(--bg-input);
+      border-color: var(--border-input);
+      padding: 10px 30px;
+      color: var(--color-headings);
+      margin-bottom: 8px;
+      &:hover {
+        border-color: #d9d9d9;
+      }
+    }
+    .ant-checkbox-wrapper {
+      span {
+        color: var(--color-headings);
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+    button {
+      background-color: #efecec;
+      border-color: #efecec;
+      color: #333e48;
+      padding: 9.5px 32px;
+      display: block;
+      height: 45px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+  }
+  .register-benefits {
+    h3 {
+      color: var(--color-headings);
+      font-weight: 400;
+      font-size: 20px;
+      margin-bottom: 26px;
+    }
+    ul {
+      li {
+        font-size: 15px;
+        line-height: 2;
+        font-weight: 400;
+        color: var(--color-headings);
+        span {
+          font-size: 18px;
+          margin-right: 16px;
+          color: #198754;
+        }
+      }
+    }
+  }
+}

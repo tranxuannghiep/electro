@@ -1,0 +1,35 @@
+#OrderSuccess {
+  .container {
+    max-width: 1200px;
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 40px;
+      font-weight: 400;
+      color: var(--color-headings);
+    }
+    .order-success {
+      margin-bottom: 60px;
+      p {
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--color-headings-sub);
+      }
+      ul {
+        padding-left: 40px;
+        list-style: disc;
+        li {
+          font-size: 15px;
+          font-weight: 500;
+          color: var(--color-headings-sub);
+          list-style: unset;
+          line-height: 1.4;
+          span {
+            color: var(--color-headings);
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import "../../../media";
+#BestDeals {
+  padding: 25px 0 30px;
+  background-color: var(--bg-home-adv);
+  .container {
+    .nav-inline {
+      display: flex;
+      align-items: center;
+      @include xl {
+        padding-bottom: 0;
+      }
+      @include xxl {
+        justify-content: center;
+      }
+      border-bottom: 1px solid var(--boder-bottom);
+      margin-bottom: 15px;
+
+      overflow-x: auto;
+      li {
+        @include xs {
+          margin-bottom: 15px;
+        }
+        @include sm {
+          margin-bottom: 15px;
+        }
+        @include xl {
+          margin-bottom: 0;
+        }
+        &:not(:first-child) {
+          margin-left: 31px;
+        }
+        a {
+          display: block;
+          width: max-content;
+          font-size: 17px;
+          font-weight: 400;
+          color: var(--color-headings);
+          padding: 8px 0;
+          position: relative;
+          &.nav-active {
+            font-weight: 500;
+            &::before {
+              content: " ";
+              height: 4px;
+              width: 10px;
+              display: block;
+              position: absolute;
+              bottom: -5px;
+              left: 50%;
+              border-radius: 0 0 10px 10px;
+              transform: translateX(-50%);
+              background-color: var(--color-primary);
+            }
+            &::after {
+              content: " ";
+              border-bottom: 1.5px solid transparent;
+              display: block;
+              position: absolute;
+              bottom: -1px;
+              width: 100%;
+              z-index: 1;
+              right: 0;
+              background-color: var(--color-primary);
+            }
+          }
+        }
+      }
+    }
+    .product-best-deals {
+      &:nth-child(3) {
+        display: none;
+      }
+      &:nth-child(4) {
+        display: none;
+      }
+      @include xl {
+        display: block !important;
+      }
+    }
+    .product-wrap {
+      border: 1px solid var(--bg-home-adv);
+      &::after {
+        display: none;
+      }
+    }
+    .product-img {
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+    .product-img-large {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      background-color: var(--bg);
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

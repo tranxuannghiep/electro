@@ -1,0 +1,39 @@
+@import "../../media";
+#Navigation {
+  background-color: var(--color-primary);
+  display: none;
+  @include xl {
+    display: block;
+  }
+  .container {
+    padding: 0;
+    .menu-navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 45px;
+      .menu-navbar-item {
+        &:hover {
+          background-color: #e7c400;
+        }
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+          display: block;
+          color: #333c48;
+          font-size: 15px;
+          font-weight: 700;
+          padding: 11px 20px;
+          span {
+            font-size: 10px;
+          }
+        }
+      }
+      li ~ li {
+        border-left: 1px solid #e7c400;
+      }
+    }
+  }
+}

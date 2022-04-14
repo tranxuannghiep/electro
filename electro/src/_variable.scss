@@ -1,0 +1,51 @@
+html {
+  height: 100%;
+  font-family: "Montserrat";
+  --color-primary: #fed700;
+  --bg: #fff;
+  --bg-panel: #df3737;
+  --color-headings: #333e48;
+  --color-text: #333e48;
+  --boder-bottom: #ddd;
+  --color-dark-hover: #333e48;
+  --color-fill: #333e48;
+  --text-name-product: #0062bd;
+  --text-price: rgba(51, 62, 72, 0.8);
+  --text-price-sale: #dc3545;
+  --text-placehoder: #717a82;
+  --bg-copyright: #eaeaea;
+  --bg-input: #fff;
+  --border-input: #ddd;
+  --bg-home-adv: #f5f5f5;
+  --bg-product-hover: #fff;
+  --color-cart: #eaeaea;
+  --bg-brand: #fff;
+  --color-brand: rgba(51, 62, 72, 0.6);
+  --color-headings-sub: rgba(51, 62, 72, 0.75);
+  --color-rating-bar: #f3f3f3;
+}
+
+html[data-theme="dark"] {
+  --color-primary: #fed700;
+  --bg: #181818;
+  --bg-panel: #e0255e;
+  --color-headings: #d9d9d9;
+  --color-text: #6e767d;
+  --boder-bottom: #2f3336;
+  --color-dark-hover: #fff;
+  --color-fill: #d9d9d9;
+  --text-name-product: #d9d9d9;
+  --text-price: #1da1f2;
+  --text-price-sale: #e0245e;
+  --text-placehoder: #678078;
+  --bg-copyright: #212121;
+  --bg-input: #212121;
+  --border-input: #333333;
+  --bg-home-adv: #212121;
+  --bg-product-hover: #212121;
+  --color-cart: #495057;
+  --bg-brand: #fed700;
+  --color-brand: #6e767d;
+  --color-headings-sub: #bdb8b8;
+  --color-rating-bar: #495057;
+}

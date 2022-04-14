@@ -1,0 +1,188 @@
+@import "../../media";
+#WishList {
+  padding-bottom: 40px;
+  .container {
+    > h3 {
+      text-align: center;
+      margin: 0;
+      padding: 80px 0;
+      font-size: 46px;
+      font-weight: 400;
+      color: var(--color-headings);
+    }
+    table {
+      .ant-table-thead {
+        display: none;
+        @include md {
+          display: table-header-group;
+        }
+      }
+      background-color: var(--bg);
+      .ant-form-item {
+        margin-bottom: 0;
+      }
+      .ant-table-tbody {
+        tr {
+          display: block;
+          border-bottom: 1px solid var(--boder-bottom);
+          padding: 20px 0;
+          @include md {
+            display: table-row;
+            border-bottom: none;
+            padding: 0;
+          }
+          td {
+            border-bottom: none;
+            padding: 10px;
+            @include xs {
+              display: block;
+              text-align: right;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              &:nth-child(1) {
+                display: block;
+              }
+              &:nth-child(2) {
+                &::before {
+                  content: "Product:";
+                }
+              }
+              &:nth-child(3) {
+                &::before {
+                  content: "Name:";
+                }
+              }
+              &:nth-child(4) {
+                &::before {
+                  content: "Price:";
+                }
+              }
+              &:nth-child(5) {
+                &::before {
+                  content: "Quantity:";
+                }
+              }
+              &:nth-child(6) {
+                &::before {
+                  content: "Subtotal:";
+                }
+              }
+            }
+            @include sm {
+              display: block;
+              text-align: right;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              &:nth-child(1) {
+                display: block;
+              }
+              &:nth-child(2) {
+                &::before {
+                  content: "Product:";
+                }
+              }
+              &:nth-child(3) {
+                &::before {
+                  content: "Name:";
+                }
+              }
+              &:nth-child(4) {
+                &::before {
+                  content: "Price:";
+                }
+              }
+            }
+
+            @include md {
+              text-align: left;
+              border-bottom: 1px solid var(--boder-bottom);
+              display: table-cell;
+              text-align: left;
+              width: auto;
+              &:nth-child(1) {
+                display: table-cell;
+              }
+              &::before {
+                display: none;
+              }
+            }
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--color-headings-sub);
+            border-bottom-color: var(--boder-bottom);
+            > a {
+              color: var(--color-headings);
+              &:hover {
+                color: var(--text-price-sale);
+              }
+              font-size: 18px;
+            }
+
+            > a.img {
+              display: inline-flex;
+              padding: 5px;
+              border: 1px solid rgb(221, 221, 221);
+              img {
+                width: 75px;
+                height: 75px;
+              }
+            }
+
+            p {
+              margin: 0;
+              //   width: 200px;
+              flex: 1;
+              line-height: 1.4;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              line-clamp: 2;
+              -webkit-box-orient: vertical;
+            }
+          }
+        }
+      }
+      .ant-table-tbody > tr.ant-table-row:hover > td {
+        background-color: var(--bg);
+      }
+    }
+    .share-social {
+      p {
+        margin: 20px 0;
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--color-headings);
+      }
+      ul {
+        display: flex;
+        li {
+          &:not(:last-child) {
+            margin-right: 20px;
+          }
+          a {
+            span {
+              font-size: 20px;
+            }
+            &.icon-face {
+              color: #3b5998;
+            }
+            &.icon-twit {
+              color: #00aced;
+            }
+            &.icon-insta {
+              color: #e60c0c;
+            }
+            &.icon-mail {
+              color: #333e48;
+            }
+          }
+        }
+      }
+    }
+  }
+}

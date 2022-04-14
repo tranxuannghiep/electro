@@ -1,0 +1,389 @@
+@import "../../media";
+#CartComponent {
+  padding-bottom: 60px;
+  .container {
+    @include xl {
+      max-width: 1200px;
+    }
+    h2.title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 40px;
+      font-weight: 400;
+      color: var(--color-headings);
+    }
+    table {
+      background-color: var(--bg);
+      .ant-form-item {
+        margin-bottom: 0;
+      }
+      .ant-table-thead {
+        display: none;
+        @include md {
+          display: table-header-group;
+        }
+        tr {
+          th:nth-child(2) {
+            width: 120px;
+          }
+          th:nth-child(3) {
+            width: 550px;
+          }
+        }
+      }
+      .ant-table-tbody {
+        tr {
+          display: block;
+          border-bottom: 1px solid var(--boder-bottom);
+          padding: 20px 0;
+          @include md {
+            display: table-row;
+            border-bottom: none;
+            padding: 0;
+          }
+          td {
+            border-bottom: none;
+            padding: 10px;
+            @include xs {
+              display: block;
+              text-align: right;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              &:nth-child(1) {
+                display: block;
+              }
+              &:nth-child(2) {
+                &::before {
+                  content: "Product:";
+                }
+              }
+              &:nth-child(3) {
+                &::before {
+                  content: "Name:";
+                }
+              }
+              &:nth-child(4) {
+                &::before {
+                  content: "Price:";
+                }
+              }
+              &:nth-child(5) {
+                &::before {
+                  content: "Quantity:";
+                }
+              }
+              &:nth-child(6) {
+                &::before {
+                  content: "Subtotal:";
+                }
+              }
+            }
+            @include sm {
+              display: block;
+              text-align: right;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              &:nth-child(1) {
+                display: block;
+              }
+              &:nth-child(2) {
+                &::before {
+                  content: "Product:";
+                }
+              }
+              &:nth-child(3) {
+                &::before {
+                  content: "Name:";
+                }
+              }
+              &:nth-child(4) {
+                &::before {
+                  content: "Price:";
+                }
+              }
+              &:nth-child(5) {
+                &::before {
+                  content: "Quantity:";
+                }
+              }
+              &:nth-child(6) {
+                &::before {
+                  content: "Subtotal:";
+                }
+              }
+            }
+
+            @include md {
+              text-align: left;
+              border-bottom: 1px solid var(--boder-bottom);
+              display: table-cell;
+              text-align: left;
+              width: auto;
+              &:nth-child(1) {
+                display: table-cell;
+              }
+              &::before {
+                display: none;
+              }
+            }
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--color-headings-sub);
+            border-bottom-color: var(--boder-bottom);
+            > a {
+              color: var(--color-headings);
+              &:hover {
+                color: var(--text-price-sale);
+              }
+              font-size: 18px;
+            }
+
+            > a.img {
+              display: inline-flex;
+              padding: 5px;
+              border: 1px solid rgb(221, 221, 221);
+              img {
+                width: 75px;
+                height: 75px;
+              }
+            }
+
+            p {
+              margin: 0;
+              //   width: 200px;
+              flex: 1;
+              line-height: 1.4;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              line-clamp: 2;
+              -webkit-box-orient: vertical;
+            }
+          }
+        }
+      }
+      .ant-table-tbody > tr.ant-table-row:hover > td {
+        background-color: var(--bg);
+      }
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      padding: 80px 8px 8px;
+      @include xs {
+        justify-content: center;
+        flex-direction: column;
+      }
+      @include sm {
+        justify-content: center;
+        flex-direction: column;
+      }
+      @include lg {
+        justify-content: space-between;
+        flex-direction: row;
+      }
+
+      .action-coupon {
+        @include md {
+          width: 480px;
+        }
+        margin-bottom: 20px;
+        .ant-input {
+          padding: 0 24px;
+          height: 45px;
+          color: var(--color-headings);
+          border-color: var(--border-input);
+          &::placeholder {
+            color: var(--text-placehoder) !important;
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+        .ant-input-affix-wrapper {
+          border: 1px solid transparent;
+        }
+        .ant-input,
+        .ant-input-affix-wrapper {
+          border-top-left-radius: 50px;
+          border-bottom-left-radius: 50px;
+          background-color: var(--bg);
+        }
+
+        .ant-input-group {
+          @include xs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .ant-input {
+            @include xs {
+              width: 220px;
+              border-radius: 50px;
+              margin-bottom: 20px;
+            }
+          }
+          .ant-input-group-addon {
+            @include xs {
+              button {
+                width: 220px;
+                border-radius: 50px;
+                margin-bottom: 20px;
+              }
+            }
+          }
+        }
+
+        .ant-input-group-addon,
+        .ant-input-search-button {
+          border-top-right-radius: 50px;
+          border-bottom-right-radius: 50px;
+          height: 45px;
+        }
+        .ant-input-search-button {
+          @include md {
+            width: 150px;
+          }
+          background-color: #333e48;
+          border: 1px solid transparent;
+          border-color: #333e48;
+          color: #d9d9d9;
+          font-weight: 500;
+        }
+      }
+      .actions-submit {
+        margin-bottom: 20px;
+        display: flex;
+        height: 45px;
+        button {
+          height: 45px;
+          display: block;
+          padding: 0 30px;
+          border-radius: 30px;
+          font-size: 15px;
+          font-weight: 500;
+          &.update-cart {
+            background-color: #efecec;
+            border-color: #efecec;
+            color: rgb(114, 111, 111);
+            @include xs {
+              width: 220px;
+            }
+            &:hover {
+              background-color: #333e48;
+              border-color: #333e48;
+              color: #fff;
+            }
+          }
+          &.checkout {
+            margin-left: 10px;
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
+            color: #333;
+            @include xs {
+              display: none;
+            }
+            &:hover {
+              background-color: #333e48;
+              border-color: #333e48;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .cart-collaterals {
+      padding-top: 70px;
+      .cart_totals {
+        h3 {
+          font-size: 24px;
+          padding: 15px 0;
+          border-bottom: 1px solid var(--boder-bottom);
+          margin-bottom: 10px;
+          position: relative;
+          color: var(--color-fill);
+          font-weight: 400;
+          &::after {
+            content: " ";
+            width: 83px;
+            border-bottom: 2px solid var(--color-primary);
+            display: block;
+            position: absolute;
+            bottom: -1px;
+          }
+        }
+        .subtotal {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 1px solid var(--boder-bottom);
+          span {
+            padding: 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--color-headings);
+            &.subtotal-price {
+              font-weight: 400;
+            }
+          }
+        }
+        .shipping {
+          padding-top: 10px;
+          border-bottom: 1px solid var(--boder-bottom);
+          > span {
+            padding-bottom: 10px;
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--color-headings);
+          }
+          .flat-rate {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            span {
+              font-size: 15px;
+              font-weight: 400;
+              color: var(--color-headings);
+            }
+          }
+        }
+        .total {
+          padding-top: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 16px;
+          font-weight: 500;
+          color: var(--color-headings);
+        }
+      }
+    }
+    .checkout-xs {
+      margin: 40px auto 0;
+      height: 45px;
+      display: none;
+      @include xs {
+        display: block;
+      }
+      padding: 0 30px;
+      border-radius: 30px;
+      font-size: 15px;
+      font-weight: 500;
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #333;
+      &:hover {
+        background-color: #333e48;
+        border-color: #333e48;
+        color: #fff;
+      }
+    }
+  }
+}

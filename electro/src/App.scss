@@ -1,0 +1,234 @@
+@import "react-toastify/dist/ReactToastify.css";
+@import "antd/dist/antd.min.css";
+@import "variable";
+@import "media";
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow-x: hidden;
+}
+
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+  font-weight: 400;
+  line-height: 1;
+}
+
+ul,
+li,
+ol {
+  line-height: 1;
+  margin: 0;
+  list-style: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  background-color: none;
+}
+.container {
+  @include sm {
+    max-width: 540px;
+  }
+  @include md {
+    max-width: 720px;
+  }
+  @include lg {
+    max-width: 960px;
+  }
+  @include xl {
+    max-width: 1200px;
+  }
+  @include xxl {
+    max-width: 1480px;
+  }
+
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+#App {
+  background-color: var(--bg);
+}
+
+.slick-dots {
+  bottom: -15px;
+  z-index: 1;
+  li {
+    margin: 0 0 0 5px;
+    button {
+      &::after,
+      &::before {
+        display: none;
+      }
+
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: #858383;
+    }
+    &.slick-active {
+      margin-right: 15px;
+      button {
+        background-color: var(--color-primary);
+        width: 30px;
+        height: 9px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+.ant-back-top {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 20px;
+  background-color: var(--text-placehoder);
+  opacity: 0.8;
+  color: var(--color-headings);
+  z-index: 10000;
+}
+
+.drawer-default {
+  @include xs {
+    .ant-drawer-content-wrapper {
+      min-width: 280px;
+      width: 100% !important;
+      max-width: 378px;
+    }
+  }
+  .ant-drawer-header {
+    background-color: var(--bg);
+    border: 1px solid var(--boder-bottom);
+    .ant-drawer-header-title {
+      .ant-drawer-title {
+        color: var(--color-headings);
+      }
+    }
+    button {
+      background-color: #efefef;
+      border-color: #efefef;
+      color: #333;
+    }
+  }
+  .ant-drawer-body {
+    background-color: var(--bg);
+  }
+}
+
+.drawer-header {
+  ul.menu-navbar {
+    li.menu-navbar-item {
+      padding: 10px 0;
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--boder-bottom);
+      }
+      a {
+        display: block;
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--color-headings);
+        list-style: 1.2;
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
+.slide-slick-custom,
+.slide-slick-custom-row2 {
+  .slick-slide > div {
+    margin-right: 5px;
+  }
+  .slick-list {
+    margin: 0 -10px;
+  }
+}
+.slide-slick-custom {
+  .slick-slide {
+    position: relative;
+    &::after {
+      height: 80%;
+      content: "";
+      border-right: 1px solid var(--boder-bottom);
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+    .Product {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes zoomout {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes zoomin {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toTop {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
