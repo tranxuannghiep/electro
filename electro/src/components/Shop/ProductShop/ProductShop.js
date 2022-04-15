@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { productsRemainingSelector } from "../../../redux/reducer/selectors/selectors";
 import Product from "../../Product/Product";
+import { useQuery } from "../../../hooks/useQuery";
 import "./ProductShop.scss";
 
 const ProductShop = (props) => {
@@ -25,6 +26,8 @@ const ProductShop = (props) => {
   const [lastPage, setLastPage] = useState(
     Math.ceil(products.length / productsPerPage)
   );
+  const [orderby, setOrderby] = useState("default");
+  const [query, setQuery] = useQuery();
 
   useEffect(() => {
     setSpin(true);
@@ -74,7 +77,15 @@ const ProductShop = (props) => {
   const showDrawer = () => {
     props.setVisible(true);
   };
-
+  const handleChangeOrderby = (value) => {
+    if (value === "default") {
+      delete query["orderby"];
+      setQuery({ ...query });
+    } else {
+      setQuery({ ...query, orderby: value });
+    }
+    setOrderby(value);
+  };
   return (
     <Spin spinning={spin}>
       <div id="ProductShop">
@@ -108,13 +119,14 @@ const ProductShop = (props) => {
             </li>
             <li className="nav-select">
               <div className="select-filter">
-                <Select defaultValue="Default sorting">
-                  <Option value="0">Default sorting</Option>
-                  <Option value="1">Sort by popularity</Option>
-                  <Option value="2">Sort by averange rating</Option>
-                  <Option value="3">Sort by laster</Option>
-                  <Option value="4">Sort by price: low to high</Option>
-                  <Option value="5">Sort by price: high to low</Option>
+                <Select
+                  defaultValue="default"
+                  value={orderby}
+                  onChange={(value) => handleChangeOrderby(value)}
+                >
+                  <Option value="default">Default sorting</Option>
+                  <Option value="price">Sort by price: low to high</Option>
+                  <Option value="price-desc">Sort by price: high to low</Option>
                 </Select>
               </div>
               <div className="show-number-of-page">

@@ -5,6 +5,7 @@ const initValues = {
   price_min: 0,
   price_max: 5000,
   categoryId: "",
+  orderby: "default",
 };
 
 const filterReducer = (state = initValues, action) => {
